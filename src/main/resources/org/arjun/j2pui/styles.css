@@ -1,0 +1,143 @@
+.root {
+    -fx-background-color: #ffffff;
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.label {
+    -fx-text-fill: #2b2b2b;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Code Area Styling */
+.code-area {
+    -fx-background-color: #ffffff;
+    -fx-font-family: 'Consolas', 'Monaco', 'DejaVu Sans Mono', monospace;
+    -fx-font-size: 14px;
+}
+
+.code-area .text {
+    -fx-fill: #000000;
+}
+
+.code-area .caret {
+    -fx-stroke: #000000;
+}
+
+.code-area .lineno {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #666666;
+    -fx-padding: 0 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1px 0 0;
+}
+
+/* Styled Text Area */
+.styled-text-area {
+    -fx-background-color: white !important;
+}
+
+.styled-text-area .content {
+    -fx-background-color: white !important;
+}
+
+.styled-text-area .paragraph-box {
+    -fx-background-color: white !important;
+}
+
+.styled-text-area .paragraph-box .paragraph-text {
+    -fx-background-color: white !important;
+}
+
+.styled-text-area .paragraph-box:has-caret {
+    -fx-background-color: #f8f8f8 !important;
+}
+
+/* Syntax Highlighting */
+.styled-text-area .keyword {
+    -fx-fill: #0033b3 !important;
+    -fx-font-weight: bold !important;
+}
+
+.styled-text-area .string {
+    -fx-fill: #067d17 !important;
+}
+
+.styled-text-area .comment {
+    -fx-fill: #8c8c8c !important;
+    -fx-font-style: italic !important;
+}
+
+.styled-text-area .number {
+    -fx-fill: #1750eb !important;
+}
+
+/* Container and Layout */
+.container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 10px;
+}
+
+.code-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 0);
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #0069d9;
+}
+
+.secondary-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #218838;
+}
+
+.tool-button {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #212529;
+    -fx-font-size: 12px;
+    -fx-padding: 4px 8px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-border-color: #dee2e6;
+    -fx-cursor: hand;
+}
+
+.tool-button:hover {
+    -fx-background-color: #e9ecef;
+    -fx-border-color: #cbd3da;
+}
+
+.placeholder-label {
+    -fx-text-fill: #999999;
+    -fx-font-style: italic;
+    -fx-padding: 10px;
+} 
