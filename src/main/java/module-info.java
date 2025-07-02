@@ -1,4 +1,5 @@
 module org.arjun.j2pui {
+    requires reactfx;
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.graphics;

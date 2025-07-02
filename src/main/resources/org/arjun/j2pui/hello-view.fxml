@@ -17,7 +17,7 @@
     </padding>
 
     <HBox spacing="30.0" alignment="CENTER" styleClass="container" VBox.vgrow="ALWAYS">
-        <VBox spacing="15.0" styleClass="code-panel" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+        <VBox spacing="15.0" styleClass="code-panel" HBox.hgrow="ALWAYS" maxWidth="Infinity" prefWidth="0" minWidth="0">
             <HBox.margin>
                 <Insets right="15.0"/>
             </HBox.margin>
@@ -32,7 +32,7 @@
             </VirtualizedScrollPane>
         </VBox>
 
-        <VBox spacing="15.0" styleClass="code-panel" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+        <VBox spacing="15.0" styleClass="code-panel" HBox.hgrow="ALWAYS" maxWidth="Infinity" prefWidth="0" minWidth="0">
             <HBox.margin>
                 <Insets left="15.0"/>
             </HBox.margin>
