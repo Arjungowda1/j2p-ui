@@ -4,7 +4,6 @@ module org.arjun.j2pui {
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.base;
-    requires org.kordamp.bootstrapfx.core;
     requires org.fxmisc.richtext;
     requires j2pbridge.main.SNAPSHOT;
 

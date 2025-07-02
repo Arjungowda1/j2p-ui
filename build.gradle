@@ -28,15 +28,12 @@ jar{
 }
 
 dependencies {
-    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
     implementation('com.github.Arjungowda1:j2pbridge:main-SNAPSHOT')
     implementation('org.fxmisc.richtext:richtextfx:0.11.2')
     implementation 'org.openjfx:javafx-controls:21.0.3:mac-aarch64'
     implementation 'org.openjfx:javafx-fxml:21.0.3:mac-aarch64'
     implementation 'org.openjfx:javafx-graphics:21.0.3:mac-aarch64'
     implementation 'org.openjfx:javafx-base:21.0.3:mac-aarch64'
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
 test {
@@ -48,7 +45,7 @@ jlink {
     launcher {
         name = 'j2papp'
     }
-    addExtraDependencies("javafx","org.kordamp.bootstrapfx", "org.fxmisc.richtext")
+    addExtraDependencies("javafx-controls","javafx-fxml","javafx-graphics","javafx-base","org.fxmisc.richtext")
     jpackage {
         imageName = 'J2PApp'
         appVersion = '1.0.0'
