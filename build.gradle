@@ -4,6 +4,24 @@ plugins {
     id 'org.beryx.jlink' version '3.0.1'
 }
 
+def os = System.getProperty('os.name').toLowerCase()
+def arch = System.getProperty('os.arch').toLowerCase()
+def installationType = "dmg"
+def platform = {
+    if(os.contains("mac")){
+        installationType = "dmg"
+        return arch.contains("aarch64") ? "mac-aarch64" : "mac-x64"
+    } else if(os.contains("win")){
+        installationType = "exe"
+        return "win"
+    } else if(os.contains("linux")){
+        installationType = "deb"
+        return "linux"
+    } else {
+        throw new GradleException("Unsupported OS: ${os}")
+    }
+}.call()
+
 repositories {
     mavenCentral()
     maven { url = uri("https://jitpack.io") }
@@ -28,12 +46,12 @@ jar{
 }
 
 dependencies {
-    implementation('com.github.Arjungowda1:j2pbridge:main-SNAPSHOT')
-    implementation('org.fxmisc.richtext:richtextfx:0.11.2')
-    implementation 'org.openjfx:javafx-controls:21.0.3:mac-aarch64'
-    implementation 'org.openjfx:javafx-fxml:21.0.3:mac-aarch64'
-    implementation 'org.openjfx:javafx-graphics:21.0.3:mac-aarch64'
-    implementation 'org.openjfx:javafx-base:21.0.3:mac-aarch64'
+    implementation "com.github.Arjungowda1:j2pbridge:main-SNAPSHOT"
+    implementation "org.fxmisc.richtext:richtextfx:0.11.2"
+    implementation "org.openjfx:javafx-controls:21.0.3:${platform}"
+    implementation "org.openjfx:javafx-fxml:21.0.3:${platform}"
+    implementation "org.openjfx:javafx-graphics:21.0.3:${platform}"
+    implementation "org.openjfx:javafx-base:21.0.3:${platform}"
 }
 
 test {
@@ -50,7 +68,7 @@ jlink {
         imageName = 'J2PApp'
         appVersion = '1.0.0'
         vendor = 'Arjun Gowda'
-        installerType = 'dmg' // options: dmg, pkg, exe, deb, rpm, msi
+        installerType = installationType
         skipInstaller = false
     }
 }
