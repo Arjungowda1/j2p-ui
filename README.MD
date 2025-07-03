@@ -27,15 +27,19 @@ cd j2p-ui
 ### Build the Project
 
 To build the project and create the application package, run the following commands:
+**WiX toolkit is required for Windows packaging.** It can be downloaded from [WiX Toolset](https://wixtoolset.org/).
 
 ```bash
-./gradlew clean build
+./gradlew clean jlink
 ./gradlew jpackage
 ```
 
 ### Running the Application
 
-After building the project, you can find the generated application package in the `build/jpackage` directory. For macOS, you will find a DMG file. Open the DMG file and drag the application to your Applications folder.
+After building the project, you can find the generated application package in the `build/jpackage` directory. 
+- For macOS, a `dmg` file will be created,
+- For Windows, an `exe` file will be created, 
+- and for Linux, a `deb` package will be generated.
 
 To run the application directly from the command line, use:
 
